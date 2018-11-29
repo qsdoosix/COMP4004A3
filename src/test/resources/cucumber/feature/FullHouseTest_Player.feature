@@ -1,0 +1,85 @@
+Feature: Test about player beat AIP with full house
+Scenario:1 HTB has full house  beats AIP flush
+    Given AIP have H2
+    And AIP have H6
+    And AIP have H3
+    And AIP have HJ
+    And AIP have H9
+    When Player have H6
+    And Player have D6
+    And Player have C6
+    And Player have S4
+    And Player have H4
+    Then Player should win
+    And Player holds FullHouse
+    And AIP holds Flush
+Scenario:2 HTB has full house  beats AIP straight 
+    Given AIP have H3
+    And AIP have C4
+    And AIP have D5
+    And AIP have S6
+    And AIP have H7
+    When Player have H9
+    And Player have D9
+    And Player have C8
+    And Player have S8
+    And Player have H8
+    Then Player should win
+    And Player holds FullHouse
+    And AIP holds Straight
+Scenario:3 HTB has full house  beats AIP 3 of a kind
+    Given AIP have H3
+    And AIP have C3
+    And AIP have D3
+    And AIP have S6
+    And AIP have H7
+    When Player have H9
+    And Player have D8
+    And Player have C8
+    And Player have S8
+    And Player have H9
+    Then Player should win
+    And Player holds FullHouse
+    And AIP holds ThreeOfAKind
+Scenario:4 HTB has full house  beats AIP two pairs
+    Given AIP have H3
+    And AIP have C3
+    And AIP have D6
+    And AIP have S6
+    And AIP have H7
+    When Player have H9
+    And Player have D8
+    And Player have C9
+    And Player have S8
+    And Player have H8
+    Then Player should win
+    And Player holds FullHouse
+    And AIP holds TwoPairs
+Scenario:5 HTB has full house  beats AIP one pair
+    Given AIP have H3
+    And AIP have C3
+    And AIP have C9
+    And AIP have S6
+    And AIP have H7
+    When Player have H8
+    And Player have D8
+    And Player have C10
+    And Player have S10
+    And Player have C8
+    Then Player should win
+    And Player holds FullHouse
+    And AIP holds Pair
+Scenario:6 HTB has full house  beats AIP high card
+    Given AIP have H3
+    And AIP have C2
+    And AIP have D6
+    And AIP have S9
+    And AIP have H7
+    When Player have H7
+    And Player have D8
+    And Player have C7
+    And Player have S7
+    And Player have H8
+    Then Player should win
+    And Player holds FullHouse
+    And AIP holds Single
