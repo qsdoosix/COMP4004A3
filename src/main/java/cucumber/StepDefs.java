@@ -1,5 +1,5 @@
 package cucumber;
-
+/*
 import static org.junit.Assert.assertEquals;
 
 import common.Poker;
@@ -98,4 +98,4 @@ public class StepDefs {
 		game.addCardtoDeck(game.cardcreator(card));
 //		game.printdeck();
 	}
-}
+}*/
